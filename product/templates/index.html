@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Uninstall predition</title>
+</head>
+<body>
+    <div style="">      
+        <h1 style="text-align: center">Upload New Data</h1>
+        <p style="text-align: center">Tải file mẫu <b><a href="{{ url_for('download') }}">tại đây</a></b> và điền 20 ngày dữ liệu</p>
+        <h2 style="text-align: center; margin: 40px 0 0 0;">Global</h2>
+        <form action="gl_pred.html" method="post" enctype="multipart/form-data">
+            <input type="file" name="fileupload" id="fileToUpload">
+            <input type="submit" value="Upload & Predict" name="submit" id='submit'>
+        </form>
+        <h2 style="text-align: center; margin: 40px 0 0 0;">United States</h2>
+        <form action="us_pred.html" method="post" enctype="multipart/form-data">
+            <input type="file" name="fileupload" id="fileToUpload">
+            <input type="submit" value="Upload & Predict" name="submit" id='submit'>
+        </form>
+    </div>
+</body>
+
+<style>
+    #fileToUpload {
+        color: gray;
+        background-color: white;
+        padding: 8px 20px;
+        border-radius: 8px;
+        font-size: 16px;
+        font-weight: bold;
+    }
+    #submit {
+        font-size: 20px;
+        border: 2px solid gray;
+        background-color:  #6c7ae0;
+        padding: 8px 20px;
+        border-radius: 8px;
+        color: white;
+    }
+    form {
+        display: flex;
+        align-items: center;
+        margin: 0 20%;
+        justify-content: center;
+    }
+</style>
+</html>
